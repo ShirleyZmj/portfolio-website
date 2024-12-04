@@ -2,8 +2,8 @@ import Layout from "@/components/Layout";
 import Head from "next/head";
 import Image from "next/image";
 import profilePic from "../../public/images/profile/profile-developer.png";
-import AnnimatedText from "@/components/AnnimatedText";
-import AnnimatedParagraph from "@/components/AnnimatedParagraph";
+import AnimatedText from "@/components/AnimatedText";
+import AnimatedParagraph from "@/components/AnimatedParagraph";
 import Link from "next/link";
 import { LinkArrow } from "@/components/Icons";
 
@@ -11,8 +11,11 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Welcome</title>
-        <meta name="description" content="Mengjia's Page" />
+        <title>Mengjia Zhang | Home Page</title>
+        <meta
+          name="description"
+          content="Mengjia Zhang's Home Page. Web Developer | Frontend Developer"
+        />
       </Head>
       <main className="flex items-center text-dark w-full">
         <Layout className="pt-0">
@@ -25,20 +28,14 @@ export default function Home() {
               ></Image>
             </div>
             <div className="w-1/2">
-              <AnnimatedText
+              <AnimatedText
                 className="!text-6xl !text-left"
                 text="Bringing Concepts to Life with Innovation and Code."
               />
-              <AnnimatedParagraph
+              <AnimatedParagraph
                 className="my-4 text-base"
                 text="
-                I'm a front-end developer with 7+ years of experience
-                creating user-focused, scalable applications. Proficient in
-                React, Vue, and advanced technologies like Virtual Reality and
-                3D data visualization. I'm also eager to learn more about
-                cutting-edge front-end technologies to continuously improve my
-                skills. Currently, I'm working toward becoming a full-stack
-                developer."
+                I am a front-end developer with over 7 years of experience in building user-centric, scalable applications. Proficient in React and Vue, I have also conducted research in Virtual Reality and 3D data visualization. Driven by a passion for innovation, I am eager to explore cutting-edge front-end technologies to continually enhance my skill set. Currently, I am focused on expanding my expertise to become a full-stack developer."
               />
               <div className="flex items-center self-start mt-2">
                 <Link
