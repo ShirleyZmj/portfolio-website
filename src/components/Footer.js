@@ -9,7 +9,7 @@ export default function Footer() {
         <span>{new Date().getFullYear()} &copy; All Rights Reserved.</span>
         <div className="flex items-center">
           Build with
-          <span className="text-fx text-2xl px-1">&hearts;</span>
+          <span className="text-primary text-2xl px-1">&hearts;</span>
           by&nbsp;<Link href="/">Mengjia Zhang</Link>
         </div>
         <div>

@@ -30,7 +30,7 @@ export default function Home() {
             <div className="w-1/2">
               <AnimatedText
                 className="!text-6xl !text-left"
-                text="Bringing Concepts to Life with Innovation and Code."
+                text="Learning is a lifelong journey."
               />
               <AnimatedParagraph
                 className="my-4 text-base"

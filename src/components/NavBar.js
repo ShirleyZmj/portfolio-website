@@ -30,15 +30,15 @@ const MenuLink = ({ href, title, className }) => {
   return (
     <Link
       href={href}
-      className={`${className} relative text-dark group hover:text-fx ${
-        isActive ? "text-fx" : "text-dark"
+      className={`${className} relative text-dark group hover:text-primary ${
+        isActive ? "text-primary" : "text-dark"
       } transition-colors ease duration-300`}
     >
       {title}
       <span
         className={`h-[1px] inline-block bg-dark absolute left-0 -bottom-0.5
-          group-hover:w-full group-hover:bg-fx transition-all ease duration-300
-          ${isActive ? "w-full bg-fx" : "w-0 bg-dark"}`}
+          group-hover:w-full group-hover:bg-primary transition-all ease duration-300
+          ${isActive ? "w-full bg-primary" : "w-0 bg-dark"}`}
       >
         &nbsp;
       </span>

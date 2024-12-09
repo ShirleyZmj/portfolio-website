@@ -7,6 +7,7 @@ import profilePic from "../../public/images/profile/profile-developer2.png";
 import Image from "next/image";
 import AnimatedNumbers from "@/components/AnimatedNumbers";
 import AnimatedNumber from "@/components/AnimatedNumber";
+import Experience from "@/components/Experience";
 
 const Statistics = ({ value, showPlus = true, title }) => {
   return (
@@ -55,6 +56,7 @@ function about() {
               <Statistics value={20} title="Projects Completed" />
             </div>
           </div>
+          <Experience />
         </Layout>
       </main>
     </>
