@@ -8,6 +8,7 @@ import Image from "next/image";
 import AnimatedNumbers from "@/components/AnimatedNumbers";
 import AnimatedNumber from "@/components/AnimatedNumber";
 import Experience from "@/components/Experience";
+import Education from "@/components/Education";
 
 const Statistics = ({ value, showPlus = true, title }) => {
   return (
@@ -57,6 +58,7 @@ function about() {
             </div>
           </div>
           <Experience />
+          <Education />
         </Layout>
       </main>
     </>

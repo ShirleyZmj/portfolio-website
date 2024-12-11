@@ -9,7 +9,13 @@ const works = [
     companyLink: "https://www.bitdeer.com",
     time: "Jun 2022 - Oct 2024",
     address: "Singapore",
-    work: "Led development of inventory/assets/funds/budget infrastructure platforms in IT.",
+    work: [
+      "Led frontend development of internal systems, like inventory, budget systems.",
+      "Enhanced team product delivery and consistency.",
+      "Upgraded front-end architecture and created CLI commands to standardize project setup.",
+      "Advocated for Sentry adoption and led tech-sharing sessions.",
+      "Developed data visualization features for finance teams and leadership, leading the creation of Revenue and Self-mining revenue dashboards.",
+    ],
   },
   {
     position: "Web Developer",
@@ -17,8 +23,11 @@ const works = [
     companyLink: "https://www.advance.ai/",
     time: "Sep 2019 - Jun 2022",
     address: "Singapore",
-    work: "1. Worked on development of app, official site, h5 and internal system in Atome.\
-2. Led VideoKYC, DIV platform and AutoOCR Platform in Guardian CV.",
+    work: [
+      "Worked on development of app, official site, h5 and internal system in Atome.",
+      "Led VideoKYC, DIV platform and AutoOCR Platform in Guardian CV.",
+      "Built and published a universal component library, improving code reusability and development efficiency across projects.",
+    ],
   },
   {
     position: "Frontend Developer",
@@ -26,7 +35,12 @@ const works = [
     companyLink: "https://www.didiglobal.com/",
     time: "Mar 2018 - Aug 2019",
     address: "Beijing, China",
-    work: "Worked on several key projects of Data Platform in Foundation Platform.",
+    work: [
+      '"On the String" Didi Technology First Prize for the outstanding project team',
+      "Worked on a one-stop data visualization analysis platform, DataE, a BI tool with modules including datasets, visualization reports, and a visualization component library.",
+      "Developed Metric Studio for configuring and managing metrics, implementing a low-code SQL query drag-and-drop component that integrates tree data structures and recursive components.",
+      "Worked on Data Dictionary, Meta Data, Data Query Center, and Data Bank to build a one-stop platform offering users data extraction, visualization, and analysis services.",
+    ],
   },
   {
     position: "Frontend Developer (Intern)",
@@ -34,12 +48,15 @@ const works = [
     companyLink: "https://www.didiglobal.com/",
     time: "May 2017 - Nov 2017",
     address: "Beijing, China",
-    work: "Worked on several key projects of Data Platform in Foundation Platform.",
+    work: [
+      "Worked on DataE, Metric Studio, Data Dictionary, Meta Data, Data Query Center, and Data Bank to build a one-stop platform offering users data extraction, visualization, and analysis services.",
+    ],
   },
 ];
 
 function Details({ position, company, companyLink, time, address, work }) {
   const ref = useRef(null);
+  const works = Array.isArray(work) ? work : [work];
   return (
     <li
       ref={ref}
@@ -64,7 +81,13 @@ function Details({ position, company, companyLink, time, address, work }) {
         <span className="capitalzie font-medium text-dark/75">
           {time} | {address}
         </span>
-        <p className="font-medium w-full">{work}</p>
+        <ul className="font-medium w-full list-disc">
+          {works.map((item, index) => (
+            <li className="ml-5" key={index}>
+              {item}
+            </li>
+          ))}
+        </ul>
       </motion.div>
     </li>
   );
