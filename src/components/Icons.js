@@ -1,11 +1,11 @@
 import * as React from "react";
 
-export const ResearchgateIcon = ({ className, ...rest }) => (
+export const ResearchgateIcon = ({ className = "", ...rest }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="1em"
     height="1em"
-    viewBox="0 0 27 27"
+    viewBox="4 4 24 24"
     {...rest}
     className={`w-full h-auto ${className}`}
   >

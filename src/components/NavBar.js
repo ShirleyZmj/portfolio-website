@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import Logo from "./Logo";
 import { useRouter } from "next/router";
 import { motion } from "framer-motion";
@@ -23,15 +23,20 @@ const IconLink = ({ url, iconNode, title, className }) => {
   );
 };
 
-const MenuLink = ({ href, title, className }) => {
+const MenuLink = ({ href, title, className, mobile = false, callback }) => {
   const router = useRouter();
   const isActive = router.asPath === href;
-  console.log(router.asPath, href);
+  const handleClick = () => {
+    router.push(href);
+    if (mobile && callback) {
+      callback();
+    }
+  };
   return (
-    <Link
-      href={href}
-      className={`${className} relative text-dark group hover:text-primary ${
-        isActive ? "text-primary" : "text-dark"
+    <button
+      onClick={handleClick}
+      className={`${className} relative group hover:text-primary ${
+        isActive ? "text-primary" : mobile ? "text-light" : "text-dark"
       } transition-colors ease duration-300`}
     >
       {title}
@@ -42,36 +47,110 @@ const MenuLink = ({ href, title, className }) => {
       >
         &nbsp;
       </span>
-    </Link>
+    </button>
   );
 };
 
 const NavBar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const handleClick = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
-    <header className="w-full px-32 py-8 font-medium flex items-center justify-between">
-      <nav>
-        <MenuLink href="/" title="Home" className="mr-4" />
-        <MenuLink href="/about" title="About" className="mx-4" />
-        {/* <MenuLink href="/projects" title="Projects" className="mr-4" /> */}
-      </nav>
-      <nav className="flex items-center justify-between gap-4">
-        <IconLink
-          url="https://github.com/ShirleyZmj"
-          iconNode={<GithubIcon />}
-          title="Github"
-        />
-        <IconLink
-          url="https://www.linkedin.com/in/zhang-mengjia/"
-          iconNode={<LinkedInIcon />}
-          title="LinkedIn"
-        />
-        <IconLink
-          url="https://www.researchgate.net/profile/Mengjia-Zhang/research"
-          iconNode={<ResearchgateIcon />}
-          title="ResearchGate"
-        />
-      </nav>
-      <div className="absolute left-[50%] translate-x-[-50%] top-2">
+    <header className="relative w-full px-32 py-8 font-medium flex items-center justify-between">
+      {/* menu button */}
+      <button
+        className="flex-col justify-center items-center hidden lg:flex"
+        onClick={handleClick}
+      >
+        <span
+          className={`bg-dark block h-0.5 w-6 rounded-sm  ${
+            isOpen ? "rotate-45 translate-y-1" : "-translate-y-0.5"
+          } transition-all duration-300 ease-out`}
+        ></span>
+        <span
+          className={`bg-dark block h-0.5  rounded-sm my-0.5 ${
+            isOpen ? "w-0 opacity-0" : "w-6"
+          } transition-all duration-300 ease-out`}
+        ></span>
+        <span
+          className={`bg-dark block h-0.5 w-6 rounded-sm ${
+            isOpen ? "-rotate-45 -translate-y-1" : "translate-y-0.5"
+          } transition-all duration-300 ease-out`}
+        ></span>
+      </button>
+
+      {/* large screen nav bar */}
+      <div className="w-full flex justify-between items-center lg:hidden">
+        <nav>
+          <MenuLink href="/" title="Home" className="mr-4" />
+          <MenuLink href="/about" title="About" className="mx-4" />
+          {/* <MenuLink href="/projects" title="Projects" className="mr-4" /> */}
+        </nav>
+
+        <nav className="flex items-center justify-between gap-4">
+          <IconLink
+            url="https://github.com/ShirleyZmj"
+            iconNode={<GithubIcon />}
+            title="Github"
+          />
+          <IconLink
+            url="https://www.linkedin.com/in/zhang-mengjia/"
+            iconNode={<LinkedInIcon />}
+            title="LinkedIn"
+          />
+          <IconLink
+            url="https://www.researchgate.net/profile/Mengjia-Zhang/research"
+            iconNode={<ResearchgateIcon />}
+            title="ResearchGate"
+          />
+        </nav>
+      </div>
+
+      {/* nav bar popup after clicking the menu button in lg screen */}
+      {isOpen && (
+        <motion.div
+          initial={{ scale: 0, opacity: 0, x: "-50%", y: "-50%" }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 0.5, type: "spring" }}
+          className={` z-30 min-w-[70vw] flex flex-col justify-between items-center 
+      fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-dark/80 rounded-lg backdrop-blur-md py-24`}
+        >
+          <nav className="flex flex-col items-center justify-center gap-4 pb-12">
+            <MenuLink href="/" title="Home" mobile callback={handleClick} />
+            <MenuLink
+              href="/about"
+              title="About"
+              mobile
+              callback={handleClick}
+            />
+            {/* <MenuLink href="/projects" title="Projects" className="mr-4" /> */}
+          </nav>
+
+          <nav className="flex items-center justify-between gap-4">
+            <IconLink
+              url="https://github.com/ShirleyZmj"
+              iconNode={<GithubIcon />}
+              title="Github"
+              className="bg-light rounded-full"
+            />
+            <IconLink
+              url="https://www.linkedin.com/in/zhang-mengjia/"
+              iconNode={<LinkedInIcon />}
+              title="LinkedIn"
+            />
+            <IconLink
+              url="https://www.researchgate.net/profile/Mengjia-Zhang/research"
+              iconNode={<ResearchgateIcon />}
+              title="ResearchGate"
+              className="bg-light rounded-sm"
+            />
+          </nav>
+        </motion.div>
+      )}
+
+      <div className="absolute left-[50%] translate-x-[-50%] top-2 z-20">
         <Logo />
       </div>
     </header>
