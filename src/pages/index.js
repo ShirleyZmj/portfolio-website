@@ -6,10 +6,12 @@ import AnimatedText from "@/components/AnimatedText";
 import AnimatedParagraph from "@/components/AnimatedParagraph";
 import Link from "next/link";
 import { LinkArrow } from "@/components/Icons";
+import TransitionEffect from "@/components/TransitionEffect";
 
 export default function Home() {
   return (
     <>
+      <TransitionEffect />
       <Head>
         <title>Mengjia Zhang | Home Page</title>
         <meta

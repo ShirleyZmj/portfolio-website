@@ -8,6 +8,7 @@ import Image from "next/image";
 import AnimatedNumbers from "@/components/AnimatedNumbers";
 import Experience from "@/components/Experience";
 import Education from "@/components/Education";
+import TransitionEffect from "@/components/TransitionEffect";
 
 const Statistics = ({ value, showPlus = true, title }) => {
   return (
@@ -26,11 +27,12 @@ const Statistics = ({ value, showPlus = true, title }) => {
 function about() {
   return (
     <>
+      <TransitionEffect />
       <Head>
         <title>Mengjia Zhang | About Page</title>
         <meta
           name="description"
-          content="Working Experience and Educational Experience"
+          content="Mengjia Zhang's Working Experience and Educational Experience"
         />
       </Head>
       <main className="min-h-screen">
