@@ -58,7 +58,10 @@ const NavBar = () => {
   };
 
   return (
-    <header className="relative w-full px-32 py-8 font-medium flex items-center justify-between">
+    <header
+      className="test  relative w-full font-medium flex items-center justify-between 
+    z-10 py-8 px-32 xs:px-4 sm:px-8 md:px-12 lg:px-16" // TODO: doesn't work
+    >
       {/* menu button */}
       <button
         className="flex-col justify-center items-center hidden lg:flex"
@@ -114,7 +117,7 @@ const NavBar = () => {
           initial={{ scale: 0, opacity: 0, x: "-50%", y: "-50%" }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 0.5, type: "spring" }}
-          className={` z-30 min-w-[70vw] flex flex-col justify-between items-center 
+          className={` z-30 min-w-[80vw] flex flex-col justify-between items-center 
       fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-dark/80 rounded-lg backdrop-blur-md py-24`}
         >
           <nav className="flex flex-col items-center justify-center gap-4 pb-12">
