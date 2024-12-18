@@ -34,13 +34,12 @@ export default function Home() {
             </div>
             <div className="w-1/2 flex flex-col items-center self-center lg:w-full lg:text-center">
               <AnimatedText
-                className="text-6xl text-left xl:text-5xl lg:text-center lg:text-6xl md:text-5xl sm:text-3xl xs:text-3xl"
+                className="text-6xl text-left 2xl:text-7xl xl:text-4xl lg:text-center lg:text-6xl md:text-5xl sm:text-3xl xs:text-3xl"
                 text="Hi! I'm Mengjia Zhang. (●ᴗ●)"
               />
               <AnimatedParagraph
                 className="my-4 text-base md:text-sm sm:text-xs sm:my-1"
-                text="
-                I am a front-end developer with over 7 years of experience in building user-centric, scalable applications. Proficient in React and Vue, I have also conducted research in Virtual Reality and 3D data visualization. Driven by a passion for innovation, I am eager to explore cutting-edge front-end technologies to continually enhance my skill set. Currently, I am focused on expanding my expertise to become a full-stack developer."
+                text="I am a front-end developer with over 7 years of experience in building user-centric, scalable applications. Proficient in React and Vue, I have also conducted research in Virtual Reality and 3D data visualization. Driven by a passion for innovation, I am eager to explore cutting-edge front-end technologies to continually enhance my skill set. Currently, I am focused on expanding my expertise to become a full-stack developer."
               />
               <div className="flex items-center self-start mt-2 lg:self-center">
                 <Link
