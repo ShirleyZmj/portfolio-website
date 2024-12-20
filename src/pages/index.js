@@ -31,6 +31,15 @@ export default function Home() {
           property="og:image"
           content="/images/profile/profile-developer.png"
         />
+        <meta
+          content="/images/profile/profile-developer.png"
+          itemprop="image"
+        ></meta>
+        <meta property="og:image:type" content="image/jpeg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:url" content="https://zhangmengjia.vercel.app/" />
+        <meta property="og:type" content="website" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
       <main className="flex items-center w-full min-h-screen text-dark">

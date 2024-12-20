@@ -46,6 +46,7 @@ function about() {
         <meta
           property="og:image"
           content="/images/profile/profile-developer2.png"
+          itemprop="image"
         />
       </Head>
       <main className="min-h-screen">
