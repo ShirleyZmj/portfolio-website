@@ -29,7 +29,7 @@ function about() {
   return (
     <>
       <TransitionEffect />
-      <Head>
+      {/* <Head>
         <title>Mengjia Zhang | About Page</title>
         <meta
           name="description"
@@ -49,7 +49,7 @@ function about() {
           content="/images/profile/profile-developer2.png"
           itemprop="image"
         />
-      </Head>
+      </Head> */}
       <NextSeo
         title="Mengjia Zhang - Senior Web Developer | About Page"
         description="Mengjia Zhang's Working Experience and Educational Experience"
