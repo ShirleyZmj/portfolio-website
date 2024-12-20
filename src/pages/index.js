@@ -7,12 +7,12 @@ import AnimatedParagraph from "@/components/AnimatedParagraph";
 import Link from "next/link";
 import { LinkArrow } from "@/components/Icons";
 import TransitionEffect from "@/components/TransitionEffect";
+import { NextSeo } from "next-seo";
 
 export default function Home() {
   return (
     <>
-      <TransitionEffect />
-      <Head>
+      {/* <Head>
         <title>Mengjia Zhang | Home Page</title>
         <meta
           name="description"
@@ -31,17 +31,30 @@ export default function Home() {
           property="og:image"
           content="/images/profile/profile-developer.png"
         />
-        <meta
-          content="/images/profile/profile-developer.png"
-          itemprop="image"
-        ></meta>
-        <meta property="og:image:type" content="image/jpeg" />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-        <meta property="og:url" content="https://zhangmengjia.vercel.app/" />
-        <meta property="og:type" content="website" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      </Head>
+      </Head> */}
+      <NextSeo
+        title="Mengjia Zhang - Senior Web Developer | Home Page"
+        description="Hi, I am a Senior Web Developer with 7+ years. Holding both a Bachelor's and Master's degree in Software Engineering. Currently based in Singapore."
+        canonical="https://zhangmengjia.vercel.app/"
+        openGraph={{
+          type: "website",
+          url: "https://zhangmengjia.vercel.app/",
+          title: "Mengjia Zhang - Senior Web Developer | Home Page",
+          description:
+            "Hi, I am a Senior Web Developer with 7+ years. Holding both a Bachelor's and Master's degree in Software Engineering. Currently based in Singapore.",
+          images: {
+            url: "/images/profile/profile-developer.png",
+            width: 500,
+            height: 500,
+            alt: "Developer Comic Profile",
+          },
+          site_name: "Mengjia Zhang's Website",
+        }}
+        twitter={{
+          cardType: "summary_large_image",
+        }}
+      />
+      <TransitionEffect />
       <main className="flex items-center w-full min-h-screen text-dark">
         <Layout className="sm:!pt-8 md:!pt-16 pt-0">
           <div className="flex items-center justify-between w-full md:flex-col md:gap-6">
