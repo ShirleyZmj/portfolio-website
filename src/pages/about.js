@@ -34,6 +34,19 @@ function about() {
           name="description"
           content="Mengjia Zhang's Working Experience and Educational Experience"
         />
+        <meta
+          name="keywords"
+          content="Mengjia Zhang, Mengjia, Frontend, Frontend Developer, Web Developer, Portfolio Website"
+        />
+        <meta property="og:title" content="Mengjia Zhang's Website" />
+        <meta
+          property="og:description"
+          content="Mengjia Zhang's Working Experience and Educational Experience"
+        />
+        <meta
+          property="og:image"
+          content="/images/profile/profile-developer2.png"
+        />
       </Head>
       <main className="min-h-screen">
         <Layout>

@@ -18,6 +18,20 @@ export default function Home() {
           name="description"
           content="Mengjia Zhang's Home Page. Web Developer | Frontend Developer"
         />
+        <meta
+          name="keywords"
+          content="Mengjia Zhang, Mengjia, Frontend, Frontend Developer, Web Developer, Portfolio Website"
+        />
+        <meta property="og:title" content="Mengjia Zhang's Website" />
+        <meta
+          property="og:description"
+          content="This is Mengjia Zhang's Home Page. Welcome!"
+        />
+        <meta
+          property="og:image"
+          content="/images/profile/profile-developer.png"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
       <main className="flex items-center w-full min-h-screen text-dark">
         <Layout className="sm:!pt-8 md:!pt-16 pt-0">
