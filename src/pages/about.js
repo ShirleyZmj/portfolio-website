@@ -9,6 +9,7 @@ import AnimatedNumbers from "@/components/AnimatedNumbers";
 import Experience from "@/components/Experience";
 import Education from "@/components/Education";
 import TransitionEffect from "@/components/TransitionEffect";
+import { NextSeo } from "next-seo";
 
 const Statistics = ({ value, showPlus = true, title }) => {
   return (
@@ -49,6 +50,29 @@ function about() {
           itemprop="image"
         />
       </Head>
+      <NextSeo
+        title="Mengjia Zhang - Senior Web Developer | About Page"
+        description="Mengjia Zhang's Working Experience and Educational Experience"
+        canonical="https://zhangmengjia.vercel.app/about"
+        openGraph={{
+          type: "website",
+          url: "https://zhangmengjia.vercel.app/about",
+          title: "Mengjia Zhang - Senior Web Developer | About Page",
+          description: "This is my educational and work experience.",
+          images: [
+            {
+              url: "/images/profile/profile-developer2.png",
+              width: 640,
+              height: 694,
+              alt: "Developer Comic Profile",
+            },
+          ],
+          site_name: "Mengjia Zhang's Website",
+        }}
+        twitter={{
+          cardType: "summary_large_image",
+        }}
+      />
       <main className="min-h-screen">
         <Layout>
           <AnimatedText
