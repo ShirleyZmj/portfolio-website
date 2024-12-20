@@ -34,20 +34,22 @@ export default function Home() {
       </Head> */}
       <NextSeo
         title="Mengjia Zhang - Senior Web Developer | Home Page"
-        description="Hi, I am a Senior Web Developer with 7+ years. Holding both a Bachelor's and Master's degree in Software Engineering. Currently based in Singapore."
+        description="Hi, I am Mengjia Zhang, a Senior Web Developer with 7+ years. Holding both a Bachelor's and Master's degree in Software Engineering. Currently based in Singapore."
         canonical="https://zhangmengjia.vercel.app/"
         openGraph={{
           type: "website",
           url: "https://zhangmengjia.vercel.app/",
           title: "Mengjia Zhang - Senior Web Developer | Home Page",
           description:
-            "Hi, I am a Senior Web Developer with 7+ years. Holding both a Bachelor's and Master's degree in Software Engineering. Currently based in Singapore.",
-          images: {
-            url: "/images/profile/profile-developer.png",
-            width: 500,
-            height: 500,
-            alt: "Developer Comic Profile",
-          },
+            "Hi, I am Mengjia Zhang, a Senior Web Developer with 7+ years. Holding both a Bachelor's and Master's degree in Software Engineering. Currently based in Singapore.",
+          images: [
+            {
+              url: "/images/profile/profile-developer.png",
+              width: 500,
+              height: 500,
+              alt: "Developer Comic Profile",
+            },
+          ],
           site_name: "Mengjia Zhang's Website",
         }}
         twitter={{
