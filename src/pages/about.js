@@ -29,27 +29,6 @@ function about() {
   return (
     <>
       <TransitionEffect />
-      {/* <Head>
-        <title>Mengjia Zhang | About Page</title>
-        <meta
-          name="description"
-          content="Mengjia Zhang's Working Experience and Educational Experience"
-        />
-        <meta
-          name="keywords"
-          content="Mengjia Zhang, Mengjia, Frontend, Frontend Developer, Web Developer, Portfolio Website"
-        />
-        <meta property="og:title" content="Mengjia Zhang's Website" />
-        <meta
-          property="og:description"
-          content="Mengjia Zhang's Working Experience and Educational Experience"
-        />
-        <meta
-          property="og:image"
-          content="/images/profile/profile-developer2.png"
-          itemprop="image"
-        />
-      </Head> */}
       <NextSeo
         title="Mengjia Zhang - Senior Web Developer | About Page"
         description="Mengjia Zhang's Working Experience and Educational Experience"
@@ -61,7 +40,7 @@ function about() {
           description: "This is my educational and work experience.",
           images: [
             {
-              url: "/images/profile/profile-developer2.png",
+              url: "/images/profile/profile-developer.png",
               width: 640,
               height: 694,
               alt: "Developer Comic Profile",

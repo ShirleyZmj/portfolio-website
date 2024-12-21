@@ -12,26 +12,6 @@ import { NextSeo } from "next-seo";
 export default function Home() {
   return (
     <>
-      {/* <Head>
-        <title>Mengjia Zhang | Home Page</title>
-        <meta
-          name="description"
-          content="Mengjia Zhang's Home Page. Web Developer | Frontend Developer"
-        />
-        <meta
-          name="keywords"
-          content="Mengjia Zhang, Mengjia, Frontend, Frontend Developer, Web Developer, Portfolio Website"
-        />
-        <meta property="og:title" content="Mengjia Zhang's Website" />
-        <meta
-          property="og:description"
-          content="This is Mengjia Zhang's Home Page. Welcome!"
-        />
-        <meta
-          property="og:image"
-          content="/images/profile/profile-developer.png"
-        />
-      </Head> */}
       <NextSeo
         title="Mengjia Zhang - Senior Web Developer | Home Page"
         description="Hi, I am Mengjia Zhang, a Senior Web Developer with 7+ years. Holding both a Bachelor's and Master's degree in Software Engineering. Currently based in Singapore."
