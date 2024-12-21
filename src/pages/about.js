@@ -40,7 +40,7 @@ function about() {
           description: "This is my educational and work experience.",
           images: [
             {
-              url: "/images/profile/profile-developer.png",
+              url: "/images/profile/profile-about-small.png",
               width: 640,
               height: 694,
               alt: "Developer Comic Profile",
