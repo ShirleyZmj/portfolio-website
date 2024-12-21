@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://zhangmengjia.vercel.app/
+
+# Sitemaps
+Sitemap: https://zhangmengjia.vercel.app/sitemap.xml
