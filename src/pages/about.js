@@ -41,8 +41,8 @@ function about() {
           images: [
             {
               url: "/images/profile/profile-about-small.png",
-              width: 640,
-              height: 694,
+              width: 448,
+              height: 485,
               alt: "Developer Comic Profile",
             },
           ],
