@@ -16,7 +16,6 @@ function AnimatedNumbers({ value, className = "" }) {
 
   useEffect(() => {
     springValue.on("change", (latest) => {
-      console.log(latest.toFixed(0));
       if (
         ref.current &&
         latest.toFixed(0) <= value &&
