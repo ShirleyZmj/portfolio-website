@@ -4,8 +4,8 @@
   "description": "Welcome to Mengjia Zhang's portfolio website!",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#ffffff",
+  "background_color": "#f5f5f5",
+  "theme_color": "#f5f5f5",
   "icons": [
     {
       "src": "/images/logo/android-chrome-192x192",
