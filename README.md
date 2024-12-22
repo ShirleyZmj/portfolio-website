@@ -1,4 +1,4 @@
-# Next.Js Website Tutorial: Create a Stunning Portfolio Website with Nextjs, Tailwind CSS and Framer-motion🌟
+# A a Stunning Portfolio Website with Nextjs, Tailwind CSS and Framer-motion🌟
 
 Take a look👇: <br />
 [Mengjia Zhang's Portfolio Website](https://zhangmengjia.vercel.app/) <br />
@@ -11,3 +11,7 @@ Take a look👇: <br />
 
 ### Learn from
 - [CodeBucks](https://devdreaming.com/)
+
+### SEO
+- next-seo
+- next-sitemap
