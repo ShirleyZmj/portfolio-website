@@ -14,8 +14,8 @@ Take a look👇: <br />
 
 ## Optimization
 ### SEO
-- next-seo
-- next-sitemap
+- [next-seo](https://www.npmjs.com/package/next-seo)
+- [next-sitemap](https://www.npmjs.com/package/next-sitemap)
 
 ### PWA
-- next-pwa
+- [next-pwa](https://www.npmjs.com/package/next-pwa)
