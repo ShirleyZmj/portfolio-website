@@ -24,7 +24,7 @@ const works = [
     time: "Sep 2019 - Jun 2022",
     address: "Singapore",
     work: [
-      "Worked on development of app, official site, h5 and internal system in Atome.",
+      "Worked on development of mobile application, official site, h5 and internal system in Atome.",
       "Led VideoKYC, DIV platform and AutoOCR Platform in Guardian CV.",
       "Built and published a universal component library, improving code reusability and development efficiency across projects.",
     ],
